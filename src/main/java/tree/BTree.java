@@ -76,6 +76,7 @@ public class BTree<Key extends Comparable<Key>, Value>  {
      */
     public Value get(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
+        if (isEmpty()) return null;
         return search(root, key, height);
     }
 
