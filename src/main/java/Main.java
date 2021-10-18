@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] keys = new int[10];
-        char[] values = new char[10];
+        int[] keys = new int[1000000];
+        char[] values = new char[1000000];
         BTree<Character, Integer> b = new BTree<>();
 
 
@@ -25,9 +25,11 @@ public class Main {
         }
 
         for (char value: values) {
-            //System.out.println("value: " + value + " - " + b.get(value));
+            System.out.println("value: " + value + " - " + b.get(value));
         }
 
         System.out.println(b);
+        System.out.println(b.height());
+        System.out.println(b.size());
     }
 }

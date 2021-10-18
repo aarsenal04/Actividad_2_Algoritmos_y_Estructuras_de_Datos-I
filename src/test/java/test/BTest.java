@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import tree.BTree;
 
+
 public class BTest {
 
     private static BTree<Character, Integer> BTree = new BTree<>();
@@ -28,12 +29,13 @@ public class BTest {
 
     @Test
     void standardAssertions() {
-        assertEquals(10, BTree.height());
+        assertEquals(2, BTree.height());
         assertEquals(4562, BTree.get('b'));
         assertEquals(67, BTree.get('i'));
         assertEquals(23, BTree.get('j'));
         assertEquals(34, BTree.get('a'));
         assertEquals(75, BTree.get('f'));
+        assertEquals(10, BTree.size());
         assertFalse(BTree.isEmpty());
     }
 
